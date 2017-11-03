@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		unzip \
 		xz-utils \
                 curl \
-                ca-certificates \
+                ca-certificates ca-certificates-java \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN curl --silent --location --retry 3 http://pki.intelions.ru/private/ca.crt -o /usr/local/share/ca-certificates/ca.intelions.ru.crt &&  \
